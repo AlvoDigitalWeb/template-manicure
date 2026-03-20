@@ -18,7 +18,7 @@ const navigation = [
 
 export function MainLayout() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-  const { setIsModalOpen } = useCookies()
+  const { resetConsent } = useCookies()
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -164,7 +164,7 @@ export function MainLayout() {
                   <Cookie size={14} /> Cookies
                 </Link>
                 <button
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={resetConsent}
                   className="flex items-center gap-2 text-sm text-primary/80 hover:text-accent transition-colors text-left cursor-pointer font-medium"
                 >
                   <Settings size={14} /> Gerir Cookies
@@ -172,11 +172,11 @@ export function MainLayout() {
               </nav>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-10 pt-8 border-t border-border/90 text-center space-y-2">
-            <Text size="xs" className="text-primary/70 font-medium tracking-wide">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-10 py-8 md:pb-0 border-t border-border/90 text-center space-y-4">
+            <Text size="xs" className="text-primary/70 text-center md:text-start font-medium tracking-wide">
               © {new Date().getFullYear()} {siteConfig.name}. Todos os direitos reservados.
             </Text>
-            <Text size="xs" className="text-primary/70 text-end font-medium tracking-wide">
+            <Text size="xs" className="text-primary/70 text-center md:text-end font-medium tracking-wide">
               Desenvolvido por <a href="https://alvodigitalweb.pt" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:text-accent underline underline-offset-4 transition-colors">Alvo Digital Web</a>
             </Text>
           </div>

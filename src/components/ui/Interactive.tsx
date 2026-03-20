@@ -47,9 +47,8 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton = ({ phoneNumber, message, className }: WhatsAppButtonProps) => {
-  const url = `https://wa.me/${phoneNumber.replace(/\D/g, "")}${
-    message ? `?text=${encodeURIComponent(message)}` : ""
-  }`
+  const url = `https://wa.me/${phoneNumber.replace(/\D/g, "")}${message ? `?text=${encodeURIComponent(message)}` : ""
+    }`
 
   return (
     <a
