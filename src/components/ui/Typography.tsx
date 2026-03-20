@@ -67,15 +67,15 @@ const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
 )
 Text.displayName = "Text"
 
-const headingVariants = cva("font-bold tracking-tight leading-[1.2] block w-full", {
+const headingVariants = cva("font-serif tracking-normal leading-[1.1] block w-full", {
   variants: {
     size: {
-      h1: "text-4xl lg:text-5xl",
-      h2: "text-3xl lg:text-4xl",
-      h3: "text-2xl lg:text-3xl",
-      h4: "text-xl lg:text-2xl",
-      h5: "text-lg lg:text-xl",
-      h6: "text-base lg:text-lg",
+      h1: "text-4xl md:text-5xl lg:text-6xl",
+      h2: "text-3xl md:text-4xl lg:text-5xl",
+      h3: "text-2xl md:text-3xl lg:text-4xl",
+      h4: "text-xl md:text-2xl lg:text-3xl",
+      h5: "text-lg md:text-xl lg:text-2xl",
+      h6: "text-base md:text-lg lg:text-xl",
     },
     weight: {
       light: "font-light",
@@ -97,9 +97,9 @@ const headingVariants = cva("font-bold tracking-tight leading-[1.2] block w-full
   },
   defaultVariants: {
     size: "h2",
-    weight: "bold",
+    weight: "medium",
     align: "left",
-    color: "default",
+    color: "accent",
   },
 })
 

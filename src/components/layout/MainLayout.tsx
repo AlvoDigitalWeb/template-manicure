@@ -28,7 +28,7 @@ export function MainLayout() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-2">
               <Link to="/" className="flex items-center space-x-2 group">
-                <span className="text-xl lg:text-2xl font-bold tracking-tight text-luxury transition-transform group-hover:scale-105 shrink-0">
+                <span className="text-xl lg:text-3xl font-serif font-medium tracking-normal text-luxury transition-transform group-hover:scale-105 shrink-0">
                   {siteConfig.name}
                 </span>
               </Link>
@@ -42,15 +42,15 @@ export function MainLayout() {
                   to={item.href}
                   className={({ isActive }) =>
                     cn(
-                      "text-sm font-semibold tracking-wide uppercase transition-colors hover:text-accent",
-                      isActive ? "text-accent" : "text-primary/70"
+                      "text-xs lg:text-sm font-medium tracking-[0.1em] uppercase transition-colors hover:text-accent",
+                      isActive ? "text-accent font-bold" : "text-primary/70"
                     )
                   }
                 >
                   {item.name}
                 </NavLink>
               ))}
-              <Button variant="primary" size="sm" radius="full" className="px-6 bg-primary text-secondary hover:bg-accent hover:text-primary transition-all shadow-md" asChild>
+              <Button variant="accent" size="sm" radius="full" className="px-6 hover:-translate-y-0.5 transition-transform shadow-md shadow-accent/20" asChild>
                 <a
                   href={`https://wa.me/${siteConfig.contact.phone.replace(/\D/g, "")}?text=${encodeURIComponent(siteConfig.contact.whatsappMessage)}`}
                   target="_blank"

@@ -8,14 +8,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: "bg-primary text-secondary hover:opacity-90",
-        secondary: "bg-secondary text-primary border border-primary hover:bg-primary/5",
-        accent: "bg-accent text-primary hover:bg-accent-hover",
+        secondary: "bg-surface text-primary border border-border hover:bg-bg",
+        accent: "bg-accent text-white hover:bg-accent-hover",
         outline: "border border-border bg-transparent hover:bg-surface text-primary",
         ghost: "bg-transparent hover:bg-surface text-primary",
       },
       size: {
-        sm: "h-9 px-3 text-sm",
-        md: "h-11 px-6 text-base",
+        sm: "h-9 px-4 text-sm",
+        md: "h-12 px-8 text-base",
         lg: "h-14 px-10 text-lg",
       },
       radius: {
@@ -28,7 +28,7 @@ const buttonVariants = cva(
     defaultVariants: {
       variant: "primary",
       size: "md",
-      radius: "md",
+      radius: "full",
     },
   }
 )

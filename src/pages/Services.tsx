@@ -8,22 +8,22 @@ export default function Services() {
   return (
     <div className="w-full">
       {/* Hero Header */}
-      <Section padding="lg" variant="surface" className="text-center">
+      <Section padding="lg" variant="default" className="text-center bg-bg pb-12">
         <Container className="space-y-6 max-w-3xl">
-          <Heading size="h1" align="center">Os Nossos Serviços</Heading>
-          <Text size="xl" color="muted" align="center">
+          <Heading size="h1" align="center" className="text-accent font-serif tracking-normal">Os Nossos Serviços</Heading>
+          <Text size="xl" className="text-primary/70" align="center">
             Oferecemos uma gama completa de cuidados para as suas mãos e pés, com as técnicas mais modernas do mercado europeu.
           </Text>
         </Container>
       </Section>
 
       {/* Services List */}
-      <Section padding="lg">
+      <Section padding="lg" className="bg-bg">
         <Container>
           <div className="grid gap-8 lg:grid-cols-2">
             {siteConfig.services.map((service) => (
-              <Card key={service.id} padding="none" variant="outline" className="flex flex-col md:flex-row h-full overflow-hidden group hover:border-accent/40 bg-white transition-all hover:shadow-lg">
-                 <div className="md:w-1/3 h-56 md:h-auto overflow-hidden">
+              <Card key={service.id} padding="none" variant="outline" className="flex flex-col md:flex-row h-full overflow-hidden group hover:border-accent/20 bg-surface rounded-3xl transition-all hover:-translate-y-1 hover:shadow-md border-transparent shadow-sm mx-auto w-full max-w-3xl">
+                 <div className="md:w-1/3 h-56 md:h-auto overflow-hidden m-2 rounded-2xl relative">
                     <img 
                       src={service.image} 
                       alt={service.title} 
@@ -32,18 +32,20 @@ export default function Services() {
                  </div>
                  <div className="md:w-2/3 p-8 flex flex-col justify-between space-y-4">
                     <div className="space-y-3">
-                        <div className="flex justify-between items-start gap-4">
-                          <Heading size="h3">{service.title}</Heading>
-                          <Text weight="bold" color="accent" size="lg" className="whitespace-nowrap">{service.price}</Text>
+                        <div className="flex justify-between items-start gap-4 flex-col lg:flex-row">
+                          <Heading size="h3" className="text-primary font-sans">{service.title}</Heading>
+                          <div className="bg-[#eae3db] text-primary px-4 py-1.5 rounded-xl text-sm font-bold shadow-sm self-start">
+                             {service.price}
+                          </div>
                         </div>
-                        <Text color="muted" size="sm" className="leading-relaxed">{service.description}</Text>
+                        <Text className="text-primary/70 leading-relaxed text-sm">{service.description}</Text>
                     </div>
-                    <div className="pt-4 flex items-center justify-between border-t border-border/50">
+                    <div className="pt-4 flex items-center justify-between border-t border-accent/10">
                         <ul className="flex flex-wrap gap-4">
-                           <li className="flex items-center gap-2 text-xs font-semibold text-primary/40">
+                           <li className="flex items-center gap-2 text-xs font-semibold text-primary/60">
                               <CheckCircle size={14} className="text-accent" /> Premium
                            </li>
-                           <li className="flex items-center gap-2 text-xs font-semibold text-primary/40">
+                           <li className="flex items-center gap-2 text-xs font-semibold text-primary/60">
                               <CheckCircle size={14} className="text-accent" /> Esterilizado
                            </li>
                         </ul>
@@ -56,7 +58,7 @@ export default function Services() {
       </Section>
 
       {/* FAQ / Info PT */}
-      <Section variant="surface" padding="lg">
+      <Section variant="surface" padding="lg" className="bg-surface rounded-t-[3rem]">
          <Container>
             <div className="max-w-4xl mx-auto space-y-12">
                <div className="text-center space-y-4">

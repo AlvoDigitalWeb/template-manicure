@@ -1,11 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+    <linearGradient id="roseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bd8e7d" />
+      <stop offset="100%" stop-color="#a87968" />
     </linearGradient>
   </defs>
-  <path d="M50 10 C35 10 25 25 25 50 C25 80 50 90 50 90 C50 90 75 80 75 50 C75 25 65 10 50 10" fill="url(#gold)" />
-  <path d="M50 20 C40 20 35 30 35 50 C35 70 50 80 50 80 C50 80 65 70 65 50 C65 30 60 20 50 20" fill="#ffffff" opacity="0.3" />
-  <text x="50" y="65" font-family="Arial, sans-serif" font-size="25" fill="#ffffff" text-anchor="middle" font-weight="bold">S</text>
+  <!-- Elegant soft circular background matching theme accent colors -->
+  <circle cx="50" cy="50" r="50" fill="url(#roseGradient)" />
+  
+  <!-- "S" Monogram (Studio) in serif font -->
+  <text x="50" y="72" font-family="Georgia, 'Times New Roman', serif" font-size="65" fill="#ffffff" text-anchor="middle" font-weight="normal">S</text>
 </svg>
